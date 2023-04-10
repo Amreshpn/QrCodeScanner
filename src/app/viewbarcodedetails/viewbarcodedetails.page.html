@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>QR Code details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-row>
+      <h5 style="color:black">{{barcoadData}}</h5><br>
+    </ion-row>
+    
+  </ion-item>
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed" (click)="sharedata()">
+    <ion-fab-button color="primary">
+      <ion-icon color="light" name="share-social-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

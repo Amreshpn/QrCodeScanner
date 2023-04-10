@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      QR code Scanner
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item class="qrcodeimg">
+    <img [src]="qrCodeDataUrl">
+  </ion-item>
+
+  <ion-fab *ngIf="isshown" horizontal="end" vertical="center" slot="fixed" (click)="sharedata()">
+    <ion-fab-button color="primary">
+      <ion-icon color="light" name="share-social-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="QrcodeText" placeholder="Enter QRcode data"> </ion-input>
+  </ion-item>
+
+  <ion-fab horizontal="start" vertical="bottom" slot="fixed" (click)="logOut()">
+    <ion-fab-button color="dark">
+      <ion-icon name="stop-circle-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-label>Logout/stop</ion-label>
+  </ion-fab>
+
+  <ion-fab horizontal="center" vertical="bottom" slot="fixed" (click)="generatebarcode()">
+    <ion-fab-button color="medium">
+      <ion-icon name="barcode-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-label>Create QrCode</ion-label>
+  </ion-fab>
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed" (click)="scanBarcode()">
+    <ion-fab-button color="success">
+      <ion-icon name="scan-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-label>Scan QrCode</ion-label>
+  </ion-fab>
+</ion-content>
+
+<ion-icon name="barcode-outline"></ion-icon>

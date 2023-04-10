@@ -1,0 +1,109 @@
+ion-item {
+    margin-bottom: 5px;
+    &.focusclass {
+        border-bottom: 2px solid #21a8d9;
+    }
+}
+
+ion-icon {
+    color: #21a8d9;
+    &.changeIconColor {
+        color: #21a8d9;
+    }
+}
+
+.ion-padding {
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+.ion-padding_content {
+    position: relative;
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 15px;
+}
+
+
+
+.login_card_main {
+    border: 2px solid #21a8d9;
+    border-radius: 10px;
+}
+
+
+
+.login_btn {
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;
+    background-color: #21a8d9;
+}
+
+.login_button_row {
+    align-items: center;
+    padding-top: 5px;
+}
+
+
+.headerstyle{
+    color: #21a8d9; 
+    font-size: 45px;
+    align-items:bottom; 
+    padding-left: 10px;
+    font-family: auto; 
+}
+
+.maincard{
+    background: rgba(237,234,240,255);
+    height: -webkit-fill-available;
+    margin-bottom: auto;
+    margin-top: 1%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+h1{
+    text-align-last: center;
+    font-size: xx-large;
+    margin-top: 20%;
+    color: black;
+    font-weight: bolder;
+}
+h3{
+    padding-top: 10px;
+    font-variant: small-caps;
+    font-size: x-large;
+    text-align-last: center;
+    padding-bottom: 10%;
+   
+}
+
+.ion_item{
+    border: groove;
+
+   border-bottom-right-radius: 10px; 
+     margin-top: 7%;
+     border: 2px solid #21a8d9;
+     border-radius: 20px;
+ }
+
+ 
+.loginbutton{
+    font-size: 1.2rem; 
+    border: groove;
+    border-bottom-right-radius: 10px; 
+      margin-top: 25%;
+      border: 2px solid #21a8d9;
+      border-radius: 20px;
+    
+}
+
+div{
+    margin-left: 15px;
+    font-size: small;
+    padding: 3px;
+}

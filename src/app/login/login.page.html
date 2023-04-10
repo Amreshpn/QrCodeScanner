@@ -1,0 +1,48 @@
+<ion-content class="ion-padding_content">
+  <ion-card class="maincard">
+
+    <h1>Hello Again!</h1>
+
+    <h3>Welcome back To<br> QR code Scanner</h3>
+
+
+    <form [formGroup]="loginActionform" (ngSubmit)="loginAction()">
+      <ion-card class="ion_item">
+        <ion-item [class.focusclass]="inputSelected" lines="none">
+          <ion-label position="floating">Enter username </ion-label>
+          <ion-input type="text" formControlName="userName" required (ionFocus)="changeInputBorder(true)"
+            (ionBlur)="changeInputBorder(false)"></ion-input>
+          <ion-icon slot="start" [class.changeIconColor]="inputSelected" name="person"></ion-icon>
+
+        </ion-item>
+        <ng-container *ngFor="let error of errorMessages.userName">
+          <div
+            *ngIf="loginActionform.get('userName').hasError(error.type) && (loginActionform.get('userName').dirty || loginActionform.get('userName').touched)">
+            <small class="error-message">{{error.message}}</small>
+          </div>
+        </ng-container>
+      </ion-card>
+
+      <ion-card class="ion_item">
+        <ion-item [class.focusclass]="passSelected" lines="none">
+          <ion-label position="floating">Password </ion-label>
+          <ion-input (ionFocus)="changePassBorder(true)" (ionBlur)="changePassBorder(false)"
+            [type]="showpassword ? 'text' : 'password'" formControlName="password" [name]="passwordtoggle">
+          </ion-input>
+          <ion-icon slot="start" [class.changeIconColor]="passSelected" name="lock-closed"></ion-icon>
+          <ion-icon *ngIf="loginActionform.get('password').value.length!=0" slot="end" name="{{passIconType}}"
+            (click)="togglePassword()"></ion-icon>
+        </ion-item>
+        <ng-container *ngFor="let error of errorMessages.password">
+          <div
+            *ngIf="loginActionform.get('password').hasError(error.type) && (loginActionform.get('password').dirty || loginActionform.get('password').touched)">
+            <small class="error-message">{{error.message}}</small>
+          </div>
+        </ng-container>
+      </ion-card>
+      <ion-button mode="ios" type="submit" class="loginbutton" expand="block"
+        [disabled]="!loginActionform.valid">Login</ion-button>
+    </form>
+  </ion-card>
+
+</ion-content>
